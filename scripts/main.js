@@ -2,23 +2,26 @@ import Usuario from '../scripts/class/Usuario.js';
 
 let formulario = document.getElementById('formulario');
 let btnCorreo = document.getElementById('btnCorreo');
+let nombre = document.getElementById('name').value;
+let apellido = document.getElementById('lastName').value;
+let correo = document.getElementById('email').value;
 
 const usuario = new Usuario();
 
 formulario.addEventListener('submit', e => {
     e.preventDefault();
-    let nombre = document.getElementById('name').value;
-    let apellido = document.getElementById('lastName').value;
-    let correo = document.getElementById('email').value;
+     nombre = document.getElementById('name').value;
+    apellido = document.getElementById('lastName').value;
+    correo = document.getElementById('email').value;
     usuario.nombre = nombre;
     usuario.apellido = apellido;
     usuario.correo = correo;
-    //console.log(usuario);
+    console.log(usuario);
     usuario.crearPerfil(usuario);
 })
 
 btnCorreo.addEventListener('click', () => {
-    let correos = document.getElementById('email').value;
+    correo
     document.getElementById('email').readOnly = true;
     usuario.buscarPerfil(correos); 
     let perfil = JSON.parse(localStorage.getItem('Buscado'));
