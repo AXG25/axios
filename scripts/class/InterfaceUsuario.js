@@ -4,7 +4,7 @@ export default class InterfaceUsuario{
             this.apellido = apellido;
             this.correo = correo;
             this.id = id;
-            this.mostrar += `
+            this.mostrar = `
             <table class="table">
             <thead>
                 <tr>
