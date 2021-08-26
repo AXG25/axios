@@ -59,10 +59,10 @@ btnCorreo.addEventListener('click', () => {
 btnEditar.addEventListener('click', () => {
     ObtenerDatos();
 
-    usuario.nombre = nombre;
-    usuario.apellido = apellido;
-    usuario.correo = correo;
-    usuario.editarPerfil(usuario, id);
+    usuario.nombre = Nombre;
+    usuario.apellido = Apellido;
+    usuario.correo = Correo;
+    usuario.editarPerfil(usuario, Id);
 })
 
 btnEliminar.addEventListener('click', () => {
