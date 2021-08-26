@@ -30,7 +30,7 @@ export default class Usuario{
     }
 
     eliminarPerfil(id){
-        axios.put(this.url+id)
+        axios.put(this.url + id)
         .then(data => console.log(data))
         .catch(console.warn)
     }
