@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+#home{
+    background-image:url(https://st.depositphotos.com/1987177/3367/v/600/depositphotos_33679631-stock-illustration-seamless-background-pet-paw-print.jpg);
+    font-family: 'Indie Flower', sans-serif ;
+    font-weight: 900;
+}
+
+#formulario{
+    background-color: #ffffff;
+    border-radius:20px;
+    margin-left:60px;
+    margin-right:60px;
+    margin-bottom:60px;
+    padding:30px;
+    font-size:30px;
+}
+
+.Headline1{
+    font-size:60px;
+    font-weight:1200;
+    color:white;
+}
+
 .guardar-cambios, .btn-iniciarSesion, .btn-registrarse {
     width: 100%;
     border-radius: 98px;
@@ -32,10 +55,11 @@
     padding: 0px;
     width: 94px;
     margin-left: 140px;
+    
 }
 
 .nombre{
-    color: #0E172C;
+    color: #000000;
     margin-bottom: 8px;
     margin-top: 8px;
 }
@@ -56,29 +80,34 @@
     margin-bottom: 0;
 }
 
-@media (min-width: 540px){
+
     .tituloPerfil {
         text-align: center;
         margin-top: 100px !important;
         margin-bottom: 45px;
     }
     .usuario{
-        width: 20%;
-        margin-left: 40%;
+        width: 100%;
+        text-align: center
     }
     .formUsuario{
         text-align: -webkit-center;
     }
     .div-usuario {
         width: 80%;
-        background: #c3f0f4;
+        background: #000000;
         margin-left: 10%;
         border-radius: 25px;
         padding: 20px;
         margin-bottom: 20px;
     }
-    .campo {
-        margin-left: 18%;
+    input {
+        width: 100% !important;
+        background-color: black !important;
+        border-radius: 25px !important; 
+        border: 1px solid black !important;
+        color: #ffffff !important;
+        height: 55px !important;
     }
     .edit {
         width: 80%;
@@ -88,4 +117,3 @@
         width: 50%;
     
     }
-}
