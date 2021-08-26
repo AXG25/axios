@@ -29,11 +29,9 @@ export default class Usuario{
         .catch(console.warn)
     }
 
-    eliminarPerfil(id){
-        axios.put(this.url+id)
+    eliminarPerfil(id,correo){
+        axios.put(this.url+id,correo)
         .then(data => console.log(data))
         .catch(console.warn)
-    }
-  
-    
+    }   
 }

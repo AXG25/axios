@@ -1,11 +1,10 @@
 export default class InterfaceUsuario{
     constructor(nombre, apellido, correo, id){
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.correo = correo;
-        this.id = id;
-        mostrar = function(){
-            let mostrar = `
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.correo = correo;
+            this.id = id;
+            this.mostrar += `
             <table class="table">
             <thead>
                 <tr>
@@ -25,7 +24,6 @@ export default class InterfaceUsuario{
             </tbody>
             </table>
             `
-        }
     }
-    
 }
+    

@@ -8,9 +8,17 @@
       "id": 1
     },
     {
+      "url": "http://localhost:4000/usuarios/",
+      "nombre": "Hernani Gonzalez",
+      "apellido": "Gonzalez",
+      "correo": "chernani@gmail.com",
       "id": 2
     },
     {
+      "url": "http://localhost:4000/usuarios/",
+      "nombre": "",
+      "apellido": "",
+      "correo": "chernani@gmail.com",
       "id": 3
     }
   ]
