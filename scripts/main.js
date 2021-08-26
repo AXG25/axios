@@ -1,4 +1,8 @@
 import Usuario from '../scripts/class/Usuario.js';
+import InterfaceUsuario from './class/InterfaceUsuario.js'
+
+let formulario = document.getElementById('formulario'),
+ btnCorreo = document.getElementById('btnCorreo');
 
 let formulario = document.getElementById('formulario'),
  btnCorreo = document.getElementById('btnCorreo');
@@ -63,4 +67,19 @@ btnEditar.addEventListener('click', () => {
 
 btnEliminar.addEventListener('click', () => {
      usuario.eliminarPerfil(DatoEspecifico()[3]);
+})
+
+btnHistorial.addEventListener('click' , () => {
+    axios.get("http://localhost:4000/usuarios/")
+    .then(({data}) => {
+        //console.log(data.find(user => user.correo === email))
+        data.map(elemento => {
+            const {nombre, apellido, correo, id} = elemento
+            console.log(nombre)
+            const historial = new InterfaceUsuario(nombre, apellido, correo,id);
+            let mostrar_historial = document.getElementById('historial')
+            mostrar_historial.innerHTML += historial.mostrar
+        })
+        
+    })
 })
