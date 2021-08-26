@@ -1,21 +1,18 @@
 import Usuario from '../scripts/class/Usuario.js';
 
-let formulario = document.getElementById('formulario');
-let btnCorreo = document.getElementById('btnCorreo');
-let nombre = document.getElementById('name').value;
-let apellido = document.getElementById('lastName').value;
-let correo = document.getElementById('email').value;
+let formulario = document.getElementById('formulario'),
+ btnCorreo = document.getElementById('btnCorreo');
 
 const usuario = new Usuario();
 
-<<<<<<< Updated upstream
-=======
+//ID Datos de entrada
 let  Nombre = document.getElementById('name'),
      Apellido = document.getElementById('lastName'),
      Correo = document.getElementById('email'),
      Id = document.getElementById('id');
 
 
+//Obtener valores de los Input
 const ObtenerDatos = () =>{
     Nombre = Nombre.value, 
     Apellido = Apellido.value,
@@ -28,45 +25,42 @@ const DatoEspecifico = () =>{
     return DatosC;
 }
 
->>>>>>> Stashed changes
 formulario.addEventListener('submit', e => {
     e.preventDefault();
-     nombre = document.getElementById('name').value;
-    apellido = document.getElementById('lastName').value;
-    correo = document.getElementById('email').value;
-    usuario.nombre = nombre;
-    usuario.apellido = apellido;
-    usuario.correo = correo;
-    console.log(usuario);
+    ObtenerDatos();
+
+    usuario.nombre = Nombre;
+    usuario.apellido = Apellido;
+    usuario.correo = Correo;
+    //console.log(usuario);
     usuario.crearPerfil(usuario);
 })
 
 btnCorreo.addEventListener('click', () => {
-    correo
-    document.getElementById('email').readOnly = true;
-    usuario.buscarPerfil(correos); 
+    let correos = DatoEspecifico()[2];
+    Correo.readOnly = true;
+
+    usuario.buscarPerfil(correos);
     let perfil = JSON.parse(localStorage.getItem('Buscado'));
+
     console.log(perfil)
     const {nombre, apellido, correo,id} = perfil;
-    document.getElementById('name').value = nombre;
-    document.getElementById('lastName').value = apellido;
-    document.getElementById('email').value = correo;
-    document.getElementById('id').value = id;
 
+    Nombre.value = nombre;
+    Apellido.value = apellido;
+    Correo.value = correo;
+    Id.value = id;
 })
 
 btnEditar.addEventListener('click', () => {
-    let id = document.getElementById('id').value;
-    let nombre = document.getElementById('name').value;
-    let apellido = document.getElementById('lastName').value;
-    let correo = document.getElementById('email').value;
+    ObtenerDatos();
+
     usuario.nombre = nombre;
     usuario.apellido = apellido;
     usuario.correo = correo;
-    usuario.editarPerfil(usuario,id);
+    usuario.editarPerfil(usuario, id);
 })
 
 btnEliminar.addEventListener('click', () => {
-     let id = document.getElementById('id').value;
-     usuario.eliminarPerfil(id)
+     usuario.eliminarPerfil(DatoEspecifico()[3]);
 })
