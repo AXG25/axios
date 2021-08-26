@@ -5,7 +5,7 @@ export default class InterfaceUsuario{
             this.correo = correo;
             this.id = id;
             this.mostrar = `
-            <table class="table">
+            <table class="table text-light">
             <thead>
                 <tr>
                 <th scope="col">#</th>

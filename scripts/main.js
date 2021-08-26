@@ -1,10 +1,8 @@
 import Usuario from '../scripts/class/Usuario.js';
 import InterfaceUsuario from './class/InterfaceUsuario.js'
 
-let formulario = document.getElementById('formulario'),
- btnCorreo = document.getElementById('btnCorreo');
-
 let formulario = document.getElementById('formulario');
+
 let btnCorreo = document.getElementById('btnCorreo');
 let btnHistorial = document.getElementById('mostrar_historial')
 const usuario = new Usuario();
