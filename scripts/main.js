@@ -12,11 +12,6 @@ let  Nombre = document.getElementById('name'),
      Correo = document.getElementById('email'),
      Id = document.getElementById('id');
 
-let Test = document.getElementById('Test');//Borrar
-
-Test.addEventListener('click',function(){//Borrar
-    console.log(DatoEspecifico()[0]);
-});
 
 const ObtenerDatos = () =>{
     Nombre = Nombre.value, 
