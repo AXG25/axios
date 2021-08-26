@@ -8,6 +8,27 @@ let correo = document.getElementById('email').value;
 
 const usuario = new Usuario();
 
+<<<<<<< Updated upstream
+=======
+let  Nombre = document.getElementById('name'),
+     Apellido = document.getElementById('lastName'),
+     Correo = document.getElementById('email'),
+     Id = document.getElementById('id');
+
+
+const ObtenerDatos = () =>{
+    Nombre = Nombre.value, 
+    Apellido = Apellido.value,
+    Correo = Correo.value;
+    Id = Id.value;
+}
+
+const DatoEspecifico = () =>{
+    let DatosC = [Nombre.value, Apellido.value, Correo.value, Id.value];
+    return DatosC;
+}
+
+>>>>>>> Stashed changes
 formulario.addEventListener('submit', e => {
     e.preventDefault();
      nombre = document.getElementById('name').value;
