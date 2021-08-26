@@ -1,4 +1,31 @@
 export default class InterfaceUsuario{
-
+    constructor(nombre, apellido, correo, id){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.id = id;
+        mostrar = function(){
+            let mostrar = `
+            <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Correo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row">${this.id}</th>
+                <td>${this.nombre}</td>
+                <td>${this.apellido}</td>
+                <td>${this.correo}</td>
+                </tr>
+            </tbody>
+            </table>
+            `
+        }
+    }
     
 }
