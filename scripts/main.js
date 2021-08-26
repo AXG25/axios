@@ -1,18 +1,17 @@
 import Usuario from '../scripts/class/Usuario.js';
-import InterfaceUsuario from './class/InterfaceUsuario.js'
 
-let formulario = document.getElementById('formulario');
+let formulario = document.getElementById('formulario'),
+    btnCorreo = document.getElementById('btnCorreo'),
+    btnHistorial = document.getElementById('mostrar_historial');
 
-let btnCorreo = document.getElementById('btnCorreo');
-let btnHistorial = document.getElementById('mostrar_historial')
-const usuario = new Usuario();
+ const usuario = new Usuario();
 
 let  Nombre = document.getElementById('name'),
      Apellido = document.getElementById('lastName'),
      Correo = document.getElementById('email'),
      Id = document.getElementById('id');
 
-
+    
 const ObtenerDatos = () =>{
     Nombre = Nombre.value, 
     Apellido = Apellido.value,
@@ -50,26 +49,19 @@ btnCorreo.addEventListener('click', () => {
     Apellido.value = apellido;
     Correo.value = correo;
     Id.value = id;
-    document.getElementById('name').value = nombre;
-    document.getElementById('lastName').value = apellido;
-    document.getElementById('email').value = correo;
-    document.getElementById('id').value = id;
 })
 
 btnEditar.addEventListener('click', () => {
     ObtenerDatos();
 
-    usuario.nombre = Nombre;
-    usuario.apellido = Apellido;
-    usuario.correo = Correo;
-    usuario.editarPerfil(usuario, Id);
+    usuario.nombre = nombre;
+    usuario.apellido = apellido;
+    usuario.correo = correo;
+    usuario.editarPerfil(usuario, id);
 })
 
 btnEliminar.addEventListener('click', () => {
-     usuario.eliminarPerfil(DatoEspecifico()[3]);
-     let id = document.getElementById('id').value;
-     let correo = document.getElementById('email').value
-     usuario.eliminarPerfil(id,correo)
+     usuario.eliminarPerfil(Id, Correo);
 })
 
 btnHistorial.addEventListener('click' , () => {
